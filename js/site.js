@@ -52,6 +52,7 @@ verCarrito.addEventListener("click", () => {
    verTotal.style.display = "block";
    miCarrito.style.display = "block";
    miCarrito.innerHTML = "";
+   totalContent.innerHTML = "";
    carrito.forEach((producto) => {
       let contentCarrito = document.createElement("div");
       contentCarrito.className = "contentCarrito";
@@ -63,17 +64,17 @@ verCarrito.addEventListener("click", () => {
 
       miCarrito.append(contentCarrito);
    });
+      const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+   let totalContentElement = document.createElement("h1");
+   totalContentElement.innerHTML = `The total amount is ${total} $`;
+   totalContent.append(totalContentElement);
 });
 
 cerrarCarrito.addEventListener("click", () => {
      verTotal.style.display = "none";
    miCarrito.style.display = "none"; 
    totalContent.style.display = "none";
+   
 });
 
-verTotal.addEventListener("click", () => {
-   const total = carrito.reduce((acc, el) => acc + el.precio, 0);
-   let totalContentElement = document.createElement("h1");
-   totalContentElement.innerHTML = `The total amount is ${total} $`;
-   totalContent.append(totalContentElement);
-});
+
