@@ -29,6 +29,10 @@ body {
     color: #676767;
   }
 
+  .swal-text {
+    font-weight: bolder;
+  }
+
   
 
   .contenido {

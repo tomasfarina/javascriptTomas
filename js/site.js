@@ -55,6 +55,19 @@ productos.forEach((producto) =>{
          precio: producto.precio,
          
       });
+      Toastify({
+         text: "Item added to cart",
+         duration: 3000,
+         destination: "https://github.com/apvarun/toastify-js",
+         newWindow: true,
+         gravity: "bottom",
+         position: "right", 
+         stopOnFocus: true, 
+         style: {
+           background: "linear-gradient(to right, #00b09b, #96c93d)",
+         },
+         onClick: function(){}
+       }).showToast();
       window.localStorage.setItem('carrito', JSON.stringify(carrito));
    })
 });
@@ -94,10 +107,28 @@ cerrarCarrito.addEventListener("click", () => {
 });
 
 limpiarCarrito.addEventListener("click", () => {
-   miCarrito.style.display = "none"; 
-   totalContent.style.display = "none";
-   verTotal.style.display = "none";
-   window.localStorage.removeItem('carrito');
+
+   swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will have to add the items manually",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("All your cart is now clean", {
+          icon: "success",
+        });
+        miCarrito.style.display = "none"; 
+        totalContent.style.display = "none";
+        verTotal.style.display = "none";
+        window.localStorage.removeItem('carrito');
+      } else {
+        swal("Your imaginary cart is now safe. :)");
+      }
+    });
+
  
 });
 
