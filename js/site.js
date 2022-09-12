@@ -1,4 +1,4 @@
-let tienda = document.getElementById("tienda");
+let tienda = document.querySelector('#tienda')
 let miCarrito = document.getElementById("miCarrito");
 
 let verCarrito = document.getElementById("verCarrito");
@@ -8,74 +8,15 @@ let verTotal = document.getElementById("vertotal");
 verTotal.style.display = "none";
 let totalContent = document.getElementById("totalContent");
 
+let carrito = [];
 
-class Carrito {
-   constructor(){
-      this.cartItems = [];
-      this.checkIfItemExists;
-   }
-
-   addItem(producto){
-      this.cartItems.push(producto);
-      const alreadyInCart=carrito.checkIfItemExists(producto.nombre);
-      if(alreadyInCart)
-         return producto.updateCantidad(producto.cantidad)
-         else return this.productos.push(producto)
+fetch ('../js/productos.json')
+   .then( (res) => res.json())
+   .then(  (data) => {
       
-   }
-   checkIfItemExists(nombre){
-      return  this.cartItems.filter(item=> item.nombre == nombre)[0] != undefined 
- }
-   removeItem(productoNombre){
-      this.cartItems = this.cartItems.filter(service => service.nombre != productoNombre)
-   } 
-   emptyCart(){
-      this.CartItems = [];
-      
-   }
-   getItems() {
-       return this.cartItems;
-   }
-
-}
-
-function addItem(producto){
-   carrito.addItem;
-   window.localStorage.setItem(carrito, JSON.stringify(carrito));
-}
-
-
-class Producto {
-   constructor(nombre,precio,cantidad) {
-      this.nombre = nombre;
-      this.precio = parseFloat(precio);
-      this.cantidad = cantidad;
-      }
-
-      updateCantidad(cantidad){
-         this.cantidad = ++cantidad;
-      }
- 
-}
-
-
-const productos = [
-   new Producto("Visibility", "50", 0),
-   new Producto("Mentions", "20", 0),
-   new Producto("Priority", "35", 0)
-];
-
-let carrito = new Carrito();
-
-
-
-
-
-
-
-productos.forEach((producto) =>{
-   let content = document.createElement("div");
-   content.innerHTML = `
+   data.forEach((producto) =>{
+      let content = document.createElement("div");
+      content.innerHTML = `
       <h3>${producto.name}</h3>
       <h3>${producto.precio + " USD / 12 month subscription"}</h3>
       `;
@@ -110,7 +51,8 @@ productos.forEach((producto) =>{
          onClick: function(){}
        }).showToast();
       window.localStorage.setItem('carrito', JSON.stringify(carrito));
-   })
+   });
+});
 });
 
 verCarrito.addEventListener("click", () => {
@@ -147,7 +89,26 @@ cerrarCarrito.addEventListener("click", () => {
    
 });
 
+limpiarCarrito.addEventListener("click", () => {
 
-
-
-
+   swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will have to add the items manually",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+   })
+   .then((willDelete) => {
+      if (willDelete) {
+         swal("All your cart is now clean", {
+            icon: "success",
+         })
+         miCarrito.style.display = "none";
+         totalContent.style.display = "none";
+         verTotal.style.display = "none";
+         window.localStorage.removeItem('carrito');  
+      } else {
+         swal("Your imaginary cart is now safe. :)");
+      }
+   });
+});

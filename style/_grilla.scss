@@ -1,0 +1,18 @@
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+
+    grid-template-areas: "header header header"
+        "contenido contenido contenido"
+        "sidebar sidebar sidebar"
+        "widget-1 widget-2 widget-3"
+        "footer footer footer";
+
+}

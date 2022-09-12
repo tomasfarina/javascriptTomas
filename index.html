@@ -1,87 +1,185 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laboro | Services</title>
+    <meta name="description" content="Find the best freelancers. Professionals and Talents from all around the world. Hire today!">
+    <meta name="keywords" content="Freelancers, Business, Hiring, Talents, Workspace">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilos/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./images/logoIcon.png">
-    <!-- Toastify -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- CSS Propio -->
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Laboro: Find the best Freelancers and Talents</title>
 </head>
 <body>
-    <div class="contenido">
 
-     <header>
-        <img data-aos="fade-zoom-in"
-        data-aos-easing="ease-in-back"
-        data-aos-delay="300"
-        data-aos-offset="0" src="./images/logo.png" alt="logo">
-    </header>
 
-    <div class="frame">
-         <table>
-          <h1>Request one of our services! ♥ </h1>
-          <div id="tienda"></div>
-          <button id="verCarrito" class="custom-btn btn-3" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></td>
-          </table>
+
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="container-fluid">
+        <div class="logo">
+       <a class="navbar-brand" href="index.html"><img class="logoImage" src="./images/logo.png" alt="logo"></a>
+        </div>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse justify-content-end flex-lg-nowrap" id="navbarNav">
+        <div class="d-flex flex-row-reverse">
+         <ul class="navbar-nav">
+           <li class="nav-item">
+             <a class="nav-link" href="./page_sections/signup.html">Apply as a freelancer</a>
+           </li>
+           <li class="nav-item">
+             <a class="nav-link" href="./page_sections/freelancers.html">Freelancers</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="./page_sections/hiring.html">Contract</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="./page_sections/services.html">Services</a>
+           </li>
+           <li class="nav-item">
+            <a class="nav-link" href="./page_sections/join.html">Join</a>
+           </li>
+            <a href="./page_sections/profile.html"><button  type="button" class="btn btn-primary position-relative">
+            Profile
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </button>
+        </a>
+         </ul>
+        </div>
+       </div>
      </div>
-     <p  
-     data-aos="fade-up"
-          data-aos-duration="1400" class="footer"> Anytime, anywhere </p>
-    </div>
+   </nav>
+ </header>
 
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title fw-bolder" id="exampleModalLabel">This is your cart</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div id="miCarrito"></div>
-        <div id="vertotal"></div>
-        <div id="totalContent"></div>
-        <div id="cerrarCarrito"></div>
-      </div>
-      <div class="modal-footer">
-        <button id="limpiarCarrito" type="button" class="btn btn-secondary fw-bolder">Clean cart</button>
-      </div>
+<div class="contenedor">
+            
+        <main class="contenido">
 
-    </div>
-  </div>
-</div>
+
+            
+            <figure data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1100">
+            
+                <img class="logoLaboro" src="./images/noname.png" alt="logo">
+  
+           </figure>
+  
+
+
+            <h1 data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1650" class="mainText">Find the best freelancers and talents. </h1>
+
+
+
+            <div data-aos="fade-right"
+            data-aos-easing="linear"
+            data-aos-duration="1950">
+
+                <form class="searchbar" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                </form>
+
+            </div>
+
+
+            <div>
+                <div data-aos="fade-right"
+                data-aos-easing="linear"
+                data-aos-duration="2450">
+
+                <div class="d-grid gap-2 d-md-block mb-1">
+                    <a href="./page_sections/signup.html" class="btn btn-outline-primary btn-lg" role="button"><span class="fw-bold">Apply as a freelancer</span></a>
+                    <a href="./page_sections/freelancers.html" class="btn btn-outline-secondary btn-lg" role="button"><span class="fw-bold">Freelancers</span></a>
+                </div>
+
+            </div>
+
+
+
+
+            <p data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1000" class="textAreaSearchBar">
     
-<!-- Sitio -->
+                Start searching categories and find the best freelancer for you.
 
-    <script src="./js/site.js"></script>
+             </p>
 
-<!-- Animate on Scroll (AOS) -->
+        </main>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+        <aside class="sidebar">
+            <h2 data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">Certified workers from all around the globe</h2>
 
-<script>
-  AOS.init();
-</script>
+            <img data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="1000"
+            data-aos-offset="0" class="sidebarPng" src="./images/sidebar.index.png.png" alt="briefcase">
 
-<!-- BOOTSTRAP V5.2 -->
+        </aside>
+
+        <div data-aos="fade-up"
+        data-aos-duration="1400" class="widgets widget-1"> <h3 class="widgetTitles">Find</h3> 
+
+        <h4 class="widgetTexts">All kinds of professionals are enlisted in our community, so you can find them anytime!</h4>
+        
+            <img class="widgetIcons" src="./images/search.png" alt="search.icon">
+
+        </div>
+
+
+        <div data-aos="fade-up"
+        data-aos-duration="1600" class="widgets widget-2"> <h3 class="widgetTitles">Work</h3> 
+        
+        <h4 class="widgetTexts">In our community we present to you any job offer posted by our members, apply and find the job of your dreams!</h4>
+            <img class="widgetIcons" src="./images/work.png" alt="work.icon">
+        
+        </div>
+
+        <div data-aos="fade-up" 
+        data-aos-duration="1800" class="widgets widget-3"> <h3 class="widgetTitles">Contract</h3> 
+        
+        <h4 class="widgetTexts">Start looking for anyone you want to hire in our categories. Everyone's listing their capabilities for you to check!</h4>
+            <img class="widgetIcons" src="./images/contract.png" alt="contract.icon">
+
+        </div>
+
+
+
+        <footer class="footer">
+
+        <div class="d-grid gap-2 col-6 mx-auto botonesFooter">
+            <a href="./page_sections/about.html" class="btn btn-outline-secondary btn-lg" role="button"><span class="fw-bold">About us</span></a>
+            <a href="./page_sections/contact.html" class="btn btn-outline-secondary btn-lg" role="button"><span class="fw-bold">Contact</span></a>
+        </div>
+    
+        <a href="./page_sections/join.html"><img class="logoFooter" src="./images/logo.png" alt="logo footer"></a>
+    
+        <p class="footerCompany">© 2022 | Laboro International - All rights reserved. </p>
+    
+        <a href="https://www.coderhouse.com"><img class="logoFooter" src="./images/logocoder.png" alt="logo coder"></a>
+    
+    </footer>
+
+    </div>
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-
-<!-- TOASTIFY -->
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
-<!-- SWAL -->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
 
 </body>
-</html>
 </html>

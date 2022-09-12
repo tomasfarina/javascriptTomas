@@ -1,0 +1,28 @@
+
+
+
+.contenedor .sidebar {
+    background: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100px;
+    grid-area: sidebar;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.329);
+
+    .sidebarPng {
+        display: block;
+        width: 40%;
+        margin-bottom: 0;
+        align-self: center;
+        margin-top: 5%;
+    }
+
+}
+
+

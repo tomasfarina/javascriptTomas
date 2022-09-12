@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Ubuntu:wght@300&display=swap');
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: $background;
+    font-family: $font;
+    font-weight: bolder;
+}
+
+
+
+
+.contenedor>div,
+.contenedor .sidebar,
+.contenedor .footer,
+.contenedor .contenido {
+
+    padding: 20px;
+    border-radius: 4px;
+
+        
+    }
+
+a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+
+
+    .text-custom{
+    color: #0062ff !important;
+    }
+
+.badge{
+    margin: 5px;
+}
+
+svg{
+    margin-right: 10px;
+}

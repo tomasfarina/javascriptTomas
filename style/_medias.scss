@@ -1,0 +1,107 @@
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        grid-template-areas: "header header header"
+            "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-1 widget-1"
+            "widget-2 widget-2 widget-2"
+            "widget-3 widget-3 widget-3"
+            "footer footer footer";
+
+        font-size: 30px;
+
+
+    }
+
+
+    .widgetIcons {
+        width: 20%;
+    }
+
+    .logoLaboro{
+        width: 80%;
+    }
+
+    .logo{
+        width: 40%;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 769px) and (max-width: 1023px) {
+
+    .contenedor {
+        grid-template-areas: "header header header"
+            "contenido contenido contenido"
+            "sidebar sidebar sidebar"
+            "widget-1 widget-2 widget-3"
+            "footer footer footer";
+
+        font-size: 15px;
+    }
+
+
+
+    .indexSidebarPng {
+        width: 30%;
+    }
+
+
+
+
+    .widgetIcons {
+        width: 30%;
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .contenedor {
+        grid-template-columns: repeat(3, 3fr);
+
+        grid-template-areas: "header header header"
+            "contenido contenido sidebar"
+            "widget-1 widget-2 widget-3"
+            "footer footer footer";
+
+        font-size: 30px;
+    }
+
+
+
+    .contenedor .sidebar {
+        width: 100%;
+
+
+    }
+
+
+
+    .logoLaboro {
+        width: 60%;
+    }
+
+    .widgetIcons {
+        width: 20%;
+    }
+
+
+}
+
+
